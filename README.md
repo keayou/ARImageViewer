@@ -1,2 +1,4 @@
 # ARImageViewer
-<img src="https://github.com/keayou/ARImageViewer/blob/master/src/IMG_5365.PNG" width = 400>
+## AR形式的图片查看器
+<iframe height=500 width=500 src="https://github.com/keayou/ARImageViewer/blob/master/src/Feb-27-2018%2019-48-01.gif">
+
