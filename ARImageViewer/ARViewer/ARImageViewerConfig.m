@@ -14,9 +14,8 @@
     
     self = [super init];
     if (self) {
-        _imageWidth = 0.6;
-        _imageHeight = 0.36;
-        _imageDepth = 1.2;
+        _imageHeight = 0.5;
+        _imageDepth = 2.0;
         _marginAngle = 1.0;
     }
     return self;

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,13 +31,7 @@
 - (IBAction)startActionClick:(id)sender {
     
     ARImageViewerViewController *vc = [ARImageViewerViewController new];
-    
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
-    
-    
-    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

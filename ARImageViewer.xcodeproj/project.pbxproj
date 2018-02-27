@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4434FEE22045657100EDD55F /* z.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4434FEE12045657100EDD55F /* z.jpg */; };
 		445AAA681FEA21F00052F741 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAA671FEA21F00052F741 /* AppDelegate.m */; };
 		445AAA6B1FEA21F00052F741 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAA6A1FEA21F00052F741 /* ViewController.m */; };
 		445AAA6E1FEA21F00052F741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445AAA6C1FEA21F00052F741 /* Main.storyboard */; };
@@ -18,12 +19,10 @@
 		445AAA851FEA40370052F741 /* ARImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAA831FEA40370052F741 /* ARImagePreviewView.m */; };
 		445AAAB31FEA4FC80052F741 /* ARImageViewerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAAB21FEA4FC80052F741 /* ARImageViewerConfig.m */; };
 		445AAABE1FEA87000052F741 /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445AAABA1FEA87000052F741 /* c.jpg */; };
-		445AAABF1FEA87000052F741 /* 122.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445AAABB1FEA87000052F741 /* 122.jpg */; };
-		445AAAC01FEA87000052F741 /* qq.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 445AAABC1FEA87000052F741 /* qq.PNG */; };
-		445AAAC11FEA87000052F741 /* z.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445AAABD1FEA87000052F741 /* z.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4434FEE12045657100EDD55F /* z.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = z.jpg; sourceTree = "<group>"; };
 		445AAA631FEA21F00052F741 /* ARImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		445AAA661FEA21F00052F741 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		445AAA671FEA21F00052F741 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,9 +42,6 @@
 		445AAAB11FEA4FC80052F741 /* ARImageViewerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARImageViewerConfig.h; sourceTree = "<group>"; };
 		445AAAB21FEA4FC80052F741 /* ARImageViewerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARImageViewerConfig.m; sourceTree = "<group>"; };
 		445AAABA1FEA87000052F741 /* c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpg; sourceTree = "<group>"; };
-		445AAABB1FEA87000052F741 /* 122.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 122.jpg; sourceTree = "<group>"; };
-		445AAABC1FEA87000052F741 /* qq.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.PNG; sourceTree = "<group>"; };
-		445AAABD1FEA87000052F741 /* z.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = z.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +79,8 @@
 				445AAA671FEA21F00052F741 /* AppDelegate.m */,
 				445AAA691FEA21F00052F741 /* ViewController.h */,
 				445AAA6A1FEA21F00052F741 /* ViewController.m */,
-				445AAABB1FEA87000052F741 /* 122.jpg */,
+				4434FEE12045657100EDD55F /* z.jpg */,
 				445AAABA1FEA87000052F741 /* c.jpg */,
-				445AAABC1FEA87000052F741 /* qq.PNG */,
-				445AAABD1FEA87000052F741 /* z.jpg */,
 				445AAA6C1FEA21F00052F741 /* Main.storyboard */,
 				445AAA6F1FEA21F00052F741 /* Assets.xcassets */,
 				445AAA711FEA21F00052F741 /* LaunchScreen.storyboard */,
@@ -169,12 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				445AAABF1FEA87000052F741 /* 122.jpg in Resources */,
-				445AAAC11FEA87000052F741 /* z.jpg in Resources */,
 				445AAA731FEA21F00052F741 /* LaunchScreen.storyboard in Resources */,
 				445AAA701FEA21F00052F741 /* Assets.xcassets in Resources */,
-				445AAAC01FEA87000052F741 /* qq.PNG in Resources */,
 				445AAA6E1FEA21F00052F741 /* Main.storyboard in Resources */,
+				4434FEE22045657100EDD55F /* z.jpg in Resources */,
 				445AAABE1FEA87000052F741 /* c.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

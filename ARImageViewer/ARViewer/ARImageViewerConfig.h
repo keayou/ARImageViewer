@@ -10,7 +10,6 @@
 
 @interface ARImageViewerConfig : NSObject
 
-@property (nonatomic, assign) float imageWidth;
 @property (nonatomic, assign) float imageHeight;
 
 @property (nonatomic, assign) float imageDepth;
