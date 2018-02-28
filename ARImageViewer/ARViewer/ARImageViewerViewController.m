@@ -13,6 +13,10 @@
 #import "ARImageNode.h"
 #import "ARImagePreviewView.h"
 #import "ARImageViewerConfig.h"
+#import "ARTextNode.h"
+
+
+static const CGFloat StartY = -0.5;
 
 static const NSInteger MAXImageCountInRow = 6;
 
@@ -30,10 +34,17 @@ static const NSInteger MAXImageCountInRow = 6;
 
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self viewSetups];
+    
     _imageConfig = [ARImageViewerConfig new];
     
     NSArray *imgList = @[@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg",@"z.jpg"];
 
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreenAction:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.sceneView addGestureRecognizer:tapGestureRecognizer];
+    
+    
     //计算行数、 行内最大图片数
     float rowF = 1.0 * imgList.count / MAXImageCountInRow;
     int rows = ceil(rowF);
@@ -48,17 +59,7 @@ static const NSInteger MAXImageCountInRow = 6;
         [self setupSceneImageWithImages:showList rowIndex:i];
     }
     
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreenAction:)];
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    [self.sceneView addGestureRecognizer:tapGestureRecognizer];
-    
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(20, 20, 40, 40);
-    backBtn.layer.cornerRadius = 40 / 2;
-    backBtn.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
-    [backBtn setTitle:@"Back" forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.sceneView addSubview:backBtn];
+    [self addTitleWithText:@"傻孩子! 你怎么会是傻孩子呢？"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -79,6 +80,15 @@ static const NSInteger MAXImageCountInRow = 6;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewSetups {
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(20, 20, 40, 40);
+    backBtn.layer.cornerRadius = 40 / 2;
+    backBtn.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+    [backBtn setTitle:@"Back" forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.sceneView addSubview:backBtn];
+}
 
 #pragma mark - Events
 - (void)tapScreenAction:(UITapGestureRecognizer *)recognizer {
@@ -117,7 +127,7 @@ static const NSInteger MAXImageCountInRow = 6;
 
 - (void)setupSceneImageWithImages:(NSArray *)imgList rowIndex:(NSInteger)rowIndex {
 
-    CGFloat yOffset = -0.5;
+    CGFloat yOffset = StartY;
     CGFloat yMargin = 0.06;
 
     NSMutableArray <SCNNode *>*nodeArr = [NSMutableArray arrayWithCapacity:imgList.count];
@@ -151,7 +161,7 @@ static const NSInteger MAXImageCountInRow = 6;
         [self.sceneView.scene.rootNode addChildNode:node];
         [node addChildNode:obj];
         node.rotation = SCNVector4Make(0, 1, 0, flag * angleDU);
-
+        
         angleDU += arctan;
         angleDU += marginAngle;
     }];
@@ -177,6 +187,11 @@ static const NSInteger MAXImageCountInRow = 6;
     return boxNode;
 }
 
+- (void)addTitleWithText:(NSString *)text {
+    ARTextNode *textNode = [[ARTextNode alloc] initWithText:text];
+    textNode.position = SCNVector3Make(0, 0 , -_imageConfig.imageDepth);
+    [self.sceneView.scene.rootNode addChildNode:textNode];
+}
 
 #pragma mark - Lazy Init
 - (ARSCNView *)sceneView {

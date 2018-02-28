@@ -19,6 +19,7 @@
 		445AAA851FEA40370052F741 /* ARImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAA831FEA40370052F741 /* ARImagePreviewView.m */; };
 		445AAAB31FEA4FC80052F741 /* ARImageViewerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 445AAAB21FEA4FC80052F741 /* ARImageViewerConfig.m */; };
 		445AAABE1FEA87000052F741 /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445AAABA1FEA87000052F741 /* c.jpg */; };
+		44EB313D2046A0AF00324C8C /* ARTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EB313B2046A0AF00324C8C /* ARTextNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		445AAAB11FEA4FC80052F741 /* ARImageViewerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARImageViewerConfig.h; sourceTree = "<group>"; };
 		445AAAB21FEA4FC80052F741 /* ARImageViewerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARImageViewerConfig.m; sourceTree = "<group>"; };
 		445AAABA1FEA87000052F741 /* c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpg; sourceTree = "<group>"; };
+		44EB313B2046A0AF00324C8C /* ARTextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTextNode.m; sourceTree = "<group>"; };
+		44EB313C2046A0AF00324C8C /* ARTextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTextNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				445AAA831FEA40370052F741 /* ARImagePreviewView.m */,
 				445AAAB11FEA4FC80052F741 /* ARImageViewerConfig.h */,
 				445AAAB21FEA4FC80052F741 /* ARImageViewerConfig.m */,
+				44EB313C2046A0AF00324C8C /* ARTextNode.h */,
+				44EB313B2046A0AF00324C8C /* ARTextNode.m */,
 			);
 			path = ARViewer;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				445AAA851FEA40370052F741 /* ARImagePreviewView.m in Sources */,
 				445AAA6B1FEA21F00052F741 /* ViewController.m in Sources */,
 				445AAA761FEA21F00052F741 /* main.m in Sources */,
+				44EB313D2046A0AF00324C8C /* ARTextNode.m in Sources */,
 				445AAA821FEA3F710052F741 /* ARImageNode.m in Sources */,
 				445AAA681FEA21F00052F741 /* AppDelegate.m in Sources */,
 				445AAA7F1FEA224B0052F741 /* ARImageViewerViewController.m in Sources */,
